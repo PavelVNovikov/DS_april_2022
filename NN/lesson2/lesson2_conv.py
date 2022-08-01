@@ -91,7 +91,7 @@ model.to(device)
 optim = torch.optim.Adam(model.parameters(), lr=0.001)
 
 # dataset
-dataset = datasets.MNIST('/Users/a14419009/Repos/NN_reload_stream2', download=False)
+dataset = datasets.MNIST('/Users/novikov-pw/Pythoning/MNIST', download=False)
 
 # loss
 loss_func = nn.MSELoss()
@@ -116,7 +116,7 @@ for epoch in range(1):
         if (step % 100 == 0):
             print(loss)
 
-test = dataset.data[100].unsqueeze(0).unsqueeze(0).float() / 255
+test = dataset.test_data[100].unsqueeze(0).unsqueeze(0).float() / 255
 predict = model(test)
 
 plt.imshow(test[0][0].view(28, 28).detach().numpy())

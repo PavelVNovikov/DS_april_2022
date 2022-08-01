@@ -62,7 +62,7 @@ optim = torch.optim.Adam(model.parameters(), lr=0.001)
 #lr scheduler
 
 #dataset
-dataset = datasets.MNIST('/Users/a14419009/Repos/NN_reload_stream2', download=False)
+dataset = datasets.MNIST('/Users/novikov-pw/Pythoning/MNIST', download=False)
 
 #
 # import matplotlib.pyplot as plt
